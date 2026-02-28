@@ -7,6 +7,7 @@ import "@/styles/index.scss";
 import "rc-slider/assets/index.css";
 import Footer from "@/components/Footer";
 import FooterNav from "@/components/FooterNav";
+import { Analytics } from "@vercel/analytics/next";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -29,6 +30,7 @@ export default function RootLayout({
         {children}
         <FooterNav />
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
