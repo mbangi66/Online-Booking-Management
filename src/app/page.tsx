@@ -4,77 +4,71 @@ import BgGlassmorphism from "@/components/BgGlassmorphism";
 import { TaxonomyType } from "@/data/types";
 import SectionSliderNewCategories from "@/components/SectionSliderNewCategories";
 import SectionOurFeatures from "@/components/SectionOurFeatures";
-import BackgroundSection from "@/components/BackgroundSection";
-import SectionGridFeaturePlaces from "@/components/SectionGridFeaturePlaces";
 import SectionHowItWork from "@/components/SectionHowItWork";
 import SectionSubscribe2 from "@/components/SectionSubscribe2";
-import SectionGridAuthorBox from "@/components/SectionGridAuthorBox";
-import SectionGridCategoryBox from "@/components/SectionGridCategoryBox";
-import SectionBecomeAnAuthor from "@/components/SectionBecomeAnAuthor";
 import SectionVideos from "@/components/SectionVideos";
-import SectionClientSay from "@/components/SectionClientSay";
 
 const DEMO_CATS: TaxonomyType[] = [
   {
     id: "1",
-    href: "/listing-stay-map",
-    name: "New Yourk",
+    href: "/listing-experiences",
+    name: "Evening Desert Safari",
     taxonomy: "category",
-    count: 188288,
+    count: 250,
     thumbnail:
-      "https://images.pexels.com/photos/64271/queen-of-liberty-statue-of-liberty-new-york-liberty-statue-64271.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+      "https://images.pexels.com/photos/1769279/pexels-photo-1769279.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   },
   {
     id: "2",
-    href: "/listing-stay-map",
-    name: "Singapore",
+    href: "/listing-experiences",
+    name: "Dubai City Tour",
     taxonomy: "category",
-    count: 188288,
+    count: 150,
     thumbnail:
-      "https://images.pexels.com/photos/7740160/pexels-photo-7740160.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "https://images.pexels.com/photos/3787839/pexels-photo-3787839.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   },
   {
     id: "3",
-    href: "/listing-stay-map",
-    name: "Paris",
+    href: "/listing-experiences",
+    name: "Dhow Cruise Marina",
     taxonomy: "category",
-    count: 188288,
+    count: 200,
     thumbnail:
-      "https://images.pexels.com/photos/739407/pexels-photo-739407.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "https://images.pexels.com/photos/326462/pexels-photo-326462.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   },
   {
     id: "4",
-    href: "/listing-stay-map",
-    name: "London",
+    href: "/listing-experiences",
+    name: "Dune Buggy Drive",
     taxonomy: "category",
-    count: 188288,
+    count: 550,
     thumbnail:
       "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
   },
   {
     id: "5",
-    href: "/listing-stay-map",
-    name: "Tokyo",
+    href: "/listing-experiences",
+    name: "Abu Dhabi City Tour",
     taxonomy: "category",
-    count: 188288,
+    count: 220,
     thumbnail:
       "https://images.pexels.com/photos/4151484/pexels-photo-4151484.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
   },
   {
     id: "6",
-    href: "/listing-stay-map",
-    name: "Maldives",
+    href: "/listing-experiences",
+    name: "Morning Desert Safari",
     taxonomy: "category",
-    count: 188288,
+    count: 130,
     thumbnail:
       "https://images.pexels.com/photos/3250613/pexels-photo-3250613.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   },
   {
     id: "7",
-    href: "/listing-stay-map",
-    name: "Italy",
+    href: "/listing-experiences",
+    name: "Hatta Mountain Tour",
     taxonomy: "category",
-    count: 188288,
+    count: 200,
     thumbnail:
       "https://images.pexels.com/photos/7740160/pexels-photo-7740160.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   },
@@ -83,64 +77,64 @@ const DEMO_CATS: TaxonomyType[] = [
 const DEMO_CATS_2: TaxonomyType[] = [
   {
     id: "1",
-    href: "/listing-stay-map",
-    name: "Enjoy the great cold",
+    href: "/listing-experiences",
+    name: "Quad Biking Dubai",
     taxonomy: "category",
-    count: 188288,
+    count: 300,
     thumbnail:
       "https://images.pexels.com/photos/5764100/pexels-photo-5764100.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
   },
   {
     id: "2",
-    href: "/listing-stay-map",
-    name: "Sleep in a floating way",
+    href: "/listing-experiences",
+    name: "Camel Riding",
     taxonomy: "category",
-    count: 188288,
+    count: 285,
     thumbnail:
       "https://images.pexels.com/photos/2869499/pexels-photo-2869499.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   },
   {
     id: "3",
-    href: "/listing-stay-map",
-    name: "In the billionaire's house",
+    href: "/listing-experiences",
+    name: "Sharjah & Ajman Tour",
     taxonomy: "category",
-    count: 188288,
+    count: 280,
     thumbnail:
       "https://images.pexels.com/photos/7031413/pexels-photo-7031413.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   },
   {
     id: "4",
-    href: "/listing-stay-map",
-    name: "Cool in the deep forest",
+    href: "/listing-experiences",
+    name: "Musandam Dibba Cruise",
     taxonomy: "category",
-    count: 188288,
+    count: 400,
     thumbnail:
       "https://images.pexels.com/photos/247532/pexels-photo-247532.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   },
   {
     id: "5",
-    href: "/listing-stay-map",
-    name: "In the billionaire's house",
+    href: "/listing-experiences",
+    name: "Dinner Tour In Dhow Cruise",
     taxonomy: "category",
-    count: 188288,
+    count: 250,
     thumbnail:
       "https://images.pexels.com/photos/7031413/pexels-photo-7031413.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   },
   {
     id: "6",
-    href: "/listing-stay-map",
-    name: "In the billionaire's house",
+    href: "/listing-experiences",
+    name: "Private Desert Safari",
     taxonomy: "category",
-    count: 188288,
+    count: 1200,
     thumbnail:
       "https://images.pexels.com/photos/9828170/pexels-photo-9828170.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
   },
   {
     id: "7",
-    href: "/listing-stay-map",
-    name: "Cool in the deep forest",
+    href: "/listing-experiences",
+    name: "Atlantis Aquaventure",
     taxonomy: "category",
-    count: 188288,
+    count: 350,
     thumbnail:
       "https://images.pexels.com/photos/247532/pexels-photo-247532.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   },
@@ -161,49 +155,22 @@ function PageHome() {
 
         <SectionOurFeatures />
 
-        <SectionGridFeaturePlaces cardType="card2" />
-
         <SectionHowItWork />
 
         <div className="relative py-16">
-          <BackgroundSection className="bg-orange-50 dark:bg-black/20" />
           <SectionSliderNewCategories
             categories={DEMO_CATS_2}
             categoryCardType="card4"
             itemPerRow={4}
-            heading="Suggestions for discovery"
-            subHeading="Popular places to stay that Chisfis recommends for you"
+            heading="Popular Tours & Safaris"
+            subHeading="Top-rated experiences by Ammar Tours"
             sliderStyle="style2"
           />
         </div>
 
-        <SectionSubscribe2 />
-
-        <div className="relative py-16">
-          <BackgroundSection className="bg-orange-50 dark:bg-black dark:bg-opacity-20 " />
-          <SectionGridAuthorBox />
-        </div>
-
-        <SectionGridCategoryBox />
-
-        <div className="relative py-16">
-          <BackgroundSection />
-          <SectionBecomeAnAuthor />
-        </div>
-
-        <SectionSliderNewCategories
-          heading="Explore by types of stays"
-          subHeading="Explore houses based on 10 types of stays"
-          categoryCardType="card5"
-          itemPerRow={5}
-        />
-
         <SectionVideos />
 
-        <div className="relative py-16">
-          <BackgroundSection />
-          <SectionClientSay />
-        </div>
+        <SectionSubscribe2 />
       </div>
     </main>
   );

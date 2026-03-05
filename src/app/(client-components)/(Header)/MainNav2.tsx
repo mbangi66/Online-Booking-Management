@@ -4,11 +4,10 @@ import MenuBar from "@/shared/MenuBar";
 import LangDropdown from "./LangDropdown";
 import NotifyDropdown from "./NotifyDropdown";
 import AvatarDropdown from "./AvatarDropdown";
-import DropdownTravelers from "./DropdownTravelers";
 import HeroSearchForm2MobileFactory from "../(HeroSearchForm2Mobile)/HeroSearchForm2MobileFactory";
 import Link from "next/link";
-import TemplatesDropdown from "./TemplatesDropdown";
 import { Route } from "@/routers/types";
+import Navigation from "@/shared/Navigation/Navigation";
 
 export interface MainNav2Props {
   className?: string;
@@ -22,7 +21,7 @@ const MainNav2: FC<MainNav2Props> = ({ className = "" }) => {
           <Logo className="w-24 self-center" />
           <div className="hidden lg:block self-center h-10 border-l border-neutral-300 dark:border-neutral-500"></div>
           <div className="hidden lg:flex ">
-            <DropdownTravelers />
+            <Navigation />
           </div>
         </div>
 
@@ -32,13 +31,12 @@ const MainNav2: FC<MainNav2Props> = ({ className = "" }) => {
 
         <div className="hidden md:flex flex-shrink-0 justify-end flex-1 lg:flex-none text-neutral-700 dark:text-neutral-100">
           <div className="hidden lg:flex space-x-1">
-            <TemplatesDropdown />
             <LangDropdown />
             <Link
-              href={"/add-listing" as Route<string>}
+              href={"/contact" as Route<string>}
               className="self-center text-opacity-90 group px-4 py-2 border border-neutral-300 hover:border-neutral-400 dark:border-neutral-700 rounded-full inline-flex items-center text-sm text-gray-700 dark:text-neutral-300 font-medium hover:text-opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
             >
-              List your property
+              Contact Us
             </Link>
 
             <NotifyDropdown />

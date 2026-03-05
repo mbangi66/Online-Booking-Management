@@ -36,33 +36,30 @@ const SectionOurFeatures: FC<SectionOurFeaturesProps> = ({
 
         <ul className="space-y-10 mt-16">
           <li className="space-y-4">
-            <Badge name="Advertising" />
+            <Badge name="Experience" />
             <span className="block text-xl font-semibold">
-              Cost-effective advertising
+              10+ Years of Experience
             </span>
             <span className="block mt-5 text-neutral-500 dark:text-neutral-400">
-              With a free listing, you can advertise your rental with no upfront
-              costs
+              We are a leading Tour Operator in Dubai with over a decade of excellence in organizing unforgettable tours.
             </span>
           </li>
           <li className="space-y-4">
-            <Badge color="green" name="Exposure " />
+            <Badge color="green" name="Quality" />
             <span className="block text-xl font-semibold">
-              Reach millions with Chisfis
+              Premium 5-Star Service
             </span>
             <span className="block mt-5 text-neutral-500 dark:text-neutral-400">
-              Millions of people are searching for unique places to stay around
-              the world
+              Enjoy luxurious land cruisers and top-tier desert safari experiences tailored for your comfort and thrill.
             </span>
           </li>
           <li className="space-y-4">
-            <Badge color="red" name="Secure" />
+            <Badge color="red" name="Satisfaction" />
             <span className="block text-xl font-semibold">
-              Secure and simple
+              Highly Rated
             </span>
             <span className="block mt-5 text-neutral-500 dark:text-neutral-400">
-              A Holiday Lettings listing gives you a secure and easy way to take
-              bookings and payments online
+              Over 10,000 satisfied customers have rated us 5 stars for our exceptional tours, making us a top choice in Dubai.
             </span>
           </li>
         </ul>

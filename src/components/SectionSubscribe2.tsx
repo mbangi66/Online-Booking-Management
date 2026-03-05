@@ -16,22 +16,22 @@ const SectionSubscribe2: FC<SectionSubscribe2Props> = ({ className = "" }) => {
       data-nc-id="SectionSubscribe2"
     >
       <div className="flex-shrink-0 mb-10 lg:mb-0 lg:mr-10 lg:w-2/5">
-        <h2 className="font-semibold text-4xl">Join our newsletter 🎉</h2>
+        <h2 className="font-semibold text-4xl">Get exclusive deals 🎉</h2>
         <span className="block mt-5 text-neutral-500 dark:text-neutral-400">
-          Read and share new perspectives on just about any topic. Everyone’s
-          welcome.
+          Subscribe to our newsletter for access to special discounts on premium
+          desert safaris and exclusive Dubai experiences.
         </span>
         <ul className="space-y-4 mt-10">
           <li className="flex items-center space-x-4">
             <Badge name="01" />
             <span className="font-medium text-neutral-700 dark:text-neutral-300">
-              Get more discount
+              Save up to 40% on tours
             </span>
           </li>
           <li className="flex items-center space-x-4">
             <Badge color="red" name="02" />
             <span className="font-medium text-neutral-700 dark:text-neutral-300">
-              Get premium magazines
+              Early access to new packages
             </span>
           </li>
         </ul>

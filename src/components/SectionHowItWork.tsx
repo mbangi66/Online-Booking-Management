@@ -21,20 +21,20 @@ const DEMO_DATA: SectionHowItWorkProps["data"] = [
   {
     id: 1,
     img: HIW1img,
-    title: "Book & relax",
-    desc: "Let each trip be an inspirational journey, each room a peaceful space",
+    title: "1. Choose your Safari",
+    desc: "Browse our selection of premium desert experiences, from morning dune bashing to luxurious evening camps.",
   },
   {
     id: 2,
     img: HIW2img,
-    title: "Smart checklist",
-    desc: "Let each trip be an inspirational journey, each room a peaceful space",
+    title: "2. Book Online",
+    desc: "Select your dates and group size. Instantly secure your booking with our seamless reservation system.",
   },
   {
     id: 3,
     img: HIW3img,
-    title: "Save more",
-    desc: "Let each trip be an inspirational journey, each room a peaceful space",
+    title: "3. Enjoy the Adventure",
+    desc: "We will pick you up from your location. Get ready for an unforgettable journey into the Dubai dunes.",
   },
 ];
 
@@ -47,8 +47,8 @@ const SectionHowItWork: FC<SectionHowItWorkProps> = ({
       className={`nc-SectionHowItWork  ${className}`}
       data-nc-id="SectionHowItWork"
     >
-      <Heading isCenter desc="Keep calm & travel on">
-        How it work
+      <Heading isCenter desc="Experience the desert in three easy steps">
+        How it works
       </Heading>
       <div className="mt-20 relative grid md:grid-cols-3 gap-20">
         <Image

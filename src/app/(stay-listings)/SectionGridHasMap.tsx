@@ -76,7 +76,7 @@ const SectionGridHasMap: FC<SectionGridHasMapProps> = () => {
             </div>
             <GoogleMapReact
               defaultZoom={12}
-              defaultCenter={DEMO_STAYS[0].map}
+              defaultCenter={DEMO_STAYS[0]?.map || { lat: 25.2048, lng: 55.2708 }}
               bootstrapURLKeys={{
                 key: "AIzaSyAGVJfZMAKYfZ71nzL_v5i3LjTTWnCYwTY",
               }}
