@@ -2,6 +2,7 @@ import React, { FC } from "react";
 import HeroSearchForm from "../(client-components)/(HeroSearchForm)/HeroSearchForm";
 import Image from "next/image";
 import ButtonPrimary from "@/shared/ButtonPrimary";
+import { AMMAR_TOURS_CONTACT } from "@/data/ammarTours";
 
 export interface SectionHeroProps {
   className?: string;
@@ -15,14 +16,24 @@ const SectionHero: FC<SectionHeroProps> = ({ className = "" }) => {
       <div className="flex flex-col lg:flex-row lg:items-center">
         <div className="flex-shrink-0 lg:w-1/2 flex flex-col items-start space-y-8 sm:space-y-10 pb-14 lg:pb-64 xl:pr-14 lg:mr-10 xl:mr-0">
           <h2 className="font-medium text-4xl md:text-5xl xl:text-7xl !leading-[114%] ">
-            Premium Desert Safaris & Tours
+            Dubai desert safaris, cruises, and city tours by Ammar Tours
           </h2>
           <span className="text-base md:text-lg text-neutral-500 dark:text-neutral-400">
-            Experience the thrill of Dubai with Ammar Tours. We specialize in 5-star Desert Safaris in the high red dunes of Al Lahbab.
+            Book evening and morning desert safari packages, dune buggy rides,
+            dhow cruises, and private UAE tours with fast support from the
+            Ammar Tours team.
           </span>
-          <ButtonPrimary href="/listing-experiences" sizeClass="px-5 py-4 sm:px-7">
-            Start your adventure
-          </ButtonPrimary>
+          <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+            <ButtonPrimary href="/listing-experiences" sizeClass="px-5 py-4 sm:px-7">
+              Explore tours
+            </ButtonPrimary>
+            <a
+              href={AMMAR_TOURS_CONTACT.phoneHref}
+              className="text-sm font-medium text-neutral-700 dark:text-neutral-300"
+            >
+              Call {AMMAR_TOURS_CONTACT.phone}
+            </a>
+          </div>
         </div>
         <div className="flex-grow">
           <Image 

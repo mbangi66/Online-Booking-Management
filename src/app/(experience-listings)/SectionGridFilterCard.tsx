@@ -22,13 +22,14 @@ const SectionGridFilterCard: FC<SectionGridFilterCardProps> = ({
   return (
     <div className={`nc-SectionGridFilterCard ${className}`}>
       <Heading2
-        heading="Experiences in Tokyo"
+        heading="Ammar Tours experiences in Dubai"
         subHeading={
           <span className="block text-neutral-500 dark:text-neutral-400 mt-3">
-            233 experiences
+            Desert safaris, buggy rides, dhow cruises, and UAE city tours
             <span className="mx-2">·</span>
-            Aug 12 - 18
-            <span className="mx-2">·</span>2 Guests
+            Instant inquiry
+            <span className="mx-2">·</span>
+            Direct booking support
           </span>
         }
       />

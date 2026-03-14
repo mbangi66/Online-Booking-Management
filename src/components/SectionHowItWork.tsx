@@ -21,20 +21,20 @@ const DEMO_DATA: SectionHowItWorkProps["data"] = [
   {
     id: 1,
     img: HIW1img,
-    title: "1. Choose your Safari",
-    desc: "Browse our selection of premium desert experiences, from morning dune bashing to luxurious evening camps.",
+    title: "1. Pick your tour",
+    desc: "Choose from desert safaris, buggy rides, dhow cruises, or city tours based on your schedule and group size.",
   },
   {
     id: 2,
     img: HIW2img,
-    title: "2. Book Online",
-    desc: "Select your dates and group size. Instantly secure your booking with our seamless reservation system.",
+    title: "2. Confirm your booking",
+    desc: "Reserve online or contact Ammar Tours on phone or WhatsApp for fast confirmation, private options, and pickup details.",
   },
   {
     id: 3,
     img: HIW3img,
-    title: "3. Enjoy the Adventure",
-    desc: "We will pick you up from your location. Get ready for an unforgettable journey into the Dubai dunes.",
+    title: "3. Enjoy Dubai",
+    desc: "Meet your guide, head into the dunes or city, and enjoy the activities included in your chosen package.",
   },
 ];
 
@@ -47,7 +47,7 @@ const SectionHowItWork: FC<SectionHowItWorkProps> = ({
       className={`nc-SectionHowItWork  ${className}`}
       data-nc-id="SectionHowItWork"
     >
-      <Heading isCenter desc="Experience the desert in three easy steps">
+      <Heading isCenter desc="Ammar Tours keeps the booking flow simple from inquiry to pickup">
         How it works
       </Heading>
       <div className="mt-20 relative grid md:grid-cols-3 gap-20">

@@ -2,6 +2,7 @@ import React, { FC } from "react";
 import rightImgPng from "@/images/our-features.png";
 import Image, { StaticImageData } from "next/image";
 import Badge from "@/shared/Badge";
+import { AMMAR_HOME_FEATURES } from "@/data/ammarTours";
 
 export interface SectionOurFeaturesProps {
   className?: string;
@@ -30,38 +31,22 @@ const SectionOurFeatures: FC<SectionOurFeaturesProps> = ({
         }`}
       >
         <span className="uppercase text-sm text-gray-400 tracking-widest">
-          BENnefits
+          Why Ammar Tours
         </span>
-        <h2 className="font-semibold text-4xl mt-5">Happening cities </h2>
+        <h2 className="font-semibold text-4xl mt-5">
+          Built for Dubai tour bookings
+        </h2>
 
         <ul className="space-y-10 mt-16">
-          <li className="space-y-4">
-            <Badge name="Experience" />
-            <span className="block text-xl font-semibold">
-              10+ Years of Experience
-            </span>
-            <span className="block mt-5 text-neutral-500 dark:text-neutral-400">
-              We are a leading Tour Operator in Dubai with over a decade of excellence in organizing unforgettable tours.
-            </span>
-          </li>
-          <li className="space-y-4">
-            <Badge color="green" name="Quality" />
-            <span className="block text-xl font-semibold">
-              Premium 5-Star Service
-            </span>
-            <span className="block mt-5 text-neutral-500 dark:text-neutral-400">
-              Enjoy luxurious land cruisers and top-tier desert safari experiences tailored for your comfort and thrill.
-            </span>
-          </li>
-          <li className="space-y-4">
-            <Badge color="red" name="Satisfaction" />
-            <span className="block text-xl font-semibold">
-              Highly Rated
-            </span>
-            <span className="block mt-5 text-neutral-500 dark:text-neutral-400">
-              Over 10,000 satisfied customers have rated us 5 stars for our exceptional tours, making us a top choice in Dubai.
-            </span>
-          </li>
+          {AMMAR_HOME_FEATURES.map((feature) => (
+            <li key={feature.title} className="space-y-4">
+              <Badge color={feature.badgeColor} name={feature.badge} />
+              <span className="block text-xl font-semibold">{feature.title}</span>
+              <span className="block mt-5 text-neutral-500 dark:text-neutral-400">
+                {feature.description}
+              </span>
+            </li>
+          ))}
         </ul>
       </div>
     </div>
