@@ -38,8 +38,8 @@ const SectionHero: FC<SectionHeroProps> = ({ className = "" }) => {
         <div className="flex-grow">
           <Image 
             className="w-full rounded-3xl" 
-            src="https://images.pexels.com/photos/1769279/pexels-photo-1769279.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
-            alt="hero" 
+            src="https://images.pexels.com/photos/16271319/pexels-photo-16271319.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+            alt="Dubai desert safari camels in the dunes" 
             width={1260}
             height={750}
             priority 

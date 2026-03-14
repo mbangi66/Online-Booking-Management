@@ -12,7 +12,7 @@ export interface SectionOurFeaturesProps {
 const SectionOurFeatures: FC<SectionOurFeaturesProps> = ({
   className = "lg:py-14",
   rightImg =
-    "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
+    "https://images.pexels.com/photos/14585894/pexels-photo-14585894.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900&w=1200",
   type = "type1",
 }) => {
   return (

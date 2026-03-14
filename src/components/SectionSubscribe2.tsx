@@ -47,7 +47,7 @@ const SectionSubscribe2: FC<SectionSubscribe2Props> = ({ className = "" }) => {
       <div className="flex-grow">
         <Image
           alt="Dubai skyline and tour planning"
-          src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=80"
+          src="https://images.pexels.com/photos/35664165/pexels-photo-35664165.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900&w=1200"
           width={1200}
           height={900}
           className="w-full rounded-3xl object-cover"
