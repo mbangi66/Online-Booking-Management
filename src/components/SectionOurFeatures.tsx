@@ -1,18 +1,18 @@
 import React, { FC } from "react";
-import rightImgPng from "@/images/our-features.png";
 import Image, { StaticImageData } from "next/image";
 import Badge from "@/shared/Badge";
 import { AMMAR_HOME_FEATURES } from "@/data/ammarTours";
 
 export interface SectionOurFeaturesProps {
   className?: string;
-  rightImg?: StaticImageData;
+  rightImg?: StaticImageData | string;
   type?: "type1" | "type2";
 }
 
 const SectionOurFeatures: FC<SectionOurFeaturesProps> = ({
   className = "lg:py-14",
-  rightImg = rightImgPng,
+  rightImg =
+    "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
   type = "type1",
 }) => {
   return (
@@ -23,7 +23,13 @@ const SectionOurFeatures: FC<SectionOurFeaturesProps> = ({
       data-nc-id="SectionOurFeatures"
     >
       <div className="flex-grow">
-        <Image src={rightImg} alt="" />
+        <Image
+          src={rightImg}
+          alt="Dubai desert safari scene"
+          width={1200}
+          height={900}
+          className="w-full rounded-3xl object-cover"
+        />
       </div>
       <div
         className={`max-w-2xl flex-shrink-0 mt-10 lg:mt-0 lg:w-2/5 ${

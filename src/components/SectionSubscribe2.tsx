@@ -1,5 +1,4 @@
 import React, { FC } from "react";
-import rightImg from "@/images/SVG-subcribe2.png";
 import Badge from "@/shared/Badge";
 import Image from "next/image";
 import ButtonPrimary from "@/shared/ButtonPrimary";
@@ -46,7 +45,13 @@ const SectionSubscribe2: FC<SectionSubscribe2Props> = ({ className = "" }) => {
         </div>
       </div>
       <div className="flex-grow">
-        <Image alt="" src={rightImg} />
+        <Image
+          alt="Dubai skyline and tour planning"
+          src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=80"
+          width={1200}
+          height={900}
+          className="w-full rounded-3xl object-cover"
+        />
       </div>
     </div>
   );

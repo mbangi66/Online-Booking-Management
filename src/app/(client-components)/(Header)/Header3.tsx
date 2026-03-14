@@ -3,8 +3,6 @@
 import React, { FC, useEffect, useRef, useState } from "react";
 import Logo from "@/shared/Logo";
 import useOutsideAlerter from "@/hooks/useOutsideAlerter";
-import NotifyDropdown from "./NotifyDropdown";
-import AvatarDropdown from "./AvatarDropdown";
 import MenuBar from "@/shared/MenuBar";
 import { SearchTab } from "../(HeroSearchForm)/HeroSearchForm";
 import HeroSearchForm2MobileFactory from "../(HeroSearchForm2Mobile)/HeroSearchForm2MobileFactory";
@@ -13,6 +11,8 @@ import { usePathname } from "next/navigation";
 import HeroSearchFormSmall from "../(HeroSearchFormSmall)/HeroSearchFormSmall";
 import { StaySearchFormFields } from "../type";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+import SwitchDarkMode from "@/shared/SwitchDarkMode";
+import ButtonPrimary from "@/shared/ButtonPrimary";
 
 interface Header3Props {
   className?: string;
@@ -179,15 +179,16 @@ const Header3: FC<Header3Props> = ({ className = "" }) => {
             {/* NAV */}
             <div className="hidden md:flex relative z-10 flex-1 justify-end text-neutral-700 dark:text-neutral-100">
               <div className=" flex space-x-1">
+                <SwitchDarkMode />
                 <Link
-                  href={"/add-listing/1"}
+                  href={"/contact"}
                   className="self-center hidden xl:inline-flex px-4 py-2 border border-neutral-300 hover:border-neutral-400 dark:border-neutral-700 rounded-full items-center text-sm text-gray-700 dark:text-neutral-300 font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
                 >
-                  List your property
+                  Contact Us
                 </Link>
-
-                <NotifyDropdown />
-                <AvatarDropdown />
+                <ButtonPrimary className="self-center" href="/listing-experiences">
+                  Book Now
+                </ButtonPrimary>
                 <MenuBar />
               </div>
             </div>

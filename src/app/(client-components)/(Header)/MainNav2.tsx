@@ -1,13 +1,12 @@
 import React, { FC } from "react";
 import Logo from "@/shared/Logo";
 import MenuBar from "@/shared/MenuBar";
-import LangDropdown from "./LangDropdown";
-import NotifyDropdown from "./NotifyDropdown";
-import AvatarDropdown from "./AvatarDropdown";
 import HeroSearchForm2MobileFactory from "../(HeroSearchForm2Mobile)/HeroSearchForm2MobileFactory";
 import Link from "next/link";
 import { Route } from "@/routers/types";
 import Navigation from "@/shared/Navigation/Navigation";
+import SwitchDarkMode from "@/shared/SwitchDarkMode";
+import ButtonPrimary from "@/shared/ButtonPrimary";
 
 export interface MainNav2Props {
   className?: string;
@@ -31,20 +30,18 @@ const MainNav2: FC<MainNav2Props> = ({ className = "" }) => {
 
         <div className="hidden md:flex flex-shrink-0 justify-end flex-1 lg:flex-none text-neutral-700 dark:text-neutral-100">
           <div className="hidden lg:flex space-x-1">
-            <LangDropdown />
+            <SwitchDarkMode />
             <Link
               href={"/contact" as Route<string>}
               className="self-center text-opacity-90 group px-4 py-2 border border-neutral-300 hover:border-neutral-400 dark:border-neutral-700 rounded-full inline-flex items-center text-sm text-gray-700 dark:text-neutral-300 font-medium hover:text-opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
             >
               Contact Us
             </Link>
-
-            <NotifyDropdown />
-            <AvatarDropdown />
+            <ButtonPrimary className="self-center" href="/listing-experiences">
+              Book Now
+            </ButtonPrimary>
           </div>
           <div className="flex space-x-2 lg:hidden">
-            <NotifyDropdown />
-            <AvatarDropdown />
             <MenuBar />
           </div>
         </div>
