@@ -2,53 +2,21 @@
 
 import Heading from "@/shared/Heading";
 import React, { FC, useState } from "react";
-import clientSayMain from "@/images/clientSayMain.png";
-import clientSay1 from "@/images/clientSay1.png";
-import clientSay2 from "@/images/clientSay2.png";
-import clientSay3 from "@/images/clientSay3.png";
-import clientSay4 from "@/images/clientSay4.png";
-import clientSay5 from "@/images/clientSay5.png";
-import clientSay6 from "@/images/clientSay6.png";
-import quotationImg from "@/images/quotation.png";
-import quotationImg2 from "@/images/quotation2.png";
 import { MapPinIcon } from "@heroicons/react/24/outline";
 import { AnimatePresence, motion, MotionConfig } from "framer-motion";
 import Image from "next/image";
 import { useSwipeable } from "react-swipeable";
 import { variants } from "@/utils/animationVariants";
+import { DUBAI_MEDIA, DUBAI_TESTIMONIALS } from "@/data/dubaiMedia";
 
 export interface SectionClientSayProps {
   className?: string;
-  data?: typeof DEMO_DATA;
+  data?: typeof DUBAI_TESTIMONIALS;
 }
-
-const DEMO_DATA = [
-  {
-    id: 1,
-    clientName: "Tiana Abie",
-    clientAddress: "Malaysia",
-    content:
-      "This place is exactly like the picture posted on Chisfis. Great service, we had a great stay!",
-  },
-  {
-    id: 2,
-    clientName: "Lennie Swiffan",
-    clientAddress: "London",
-    content:
-      "This place is exactly like the picture posted on Chisfis. Great service, we had a great stay!",
-  },
-  {
-    id: 3,
-    clientName: "Berta Emili",
-    clientAddress: "Tokyo",
-    content:
-      "This place is exactly like the picture posted on Chisfis. Great service, we had a great stay!",
-  },
-];
 
 const SectionClientSay: FC<SectionClientSayProps> = ({
   className = "",
-  data = DEMO_DATA,
+  data = DUBAI_TESTIMONIALS,
 }) => {
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState(0);
@@ -76,65 +44,28 @@ const SectionClientSay: FC<SectionClientSayProps> = ({
     trackMouse: true,
   });
 
-  let currentItem = data[index];
-
-  const renderBg = () => {
-    return (
-      <div className="hidden md:block">
-        <Image
-          className="absolute top-9 -left-20"
-          src={clientSay1}
-          alt="client 1"
-        />
-        <Image
-          className="absolute bottom-[100px] right-full mr-40"
-          src={clientSay2}
-          alt="client 2"
-        />
-        <Image
-          className="absolute top-full left-[140px]"
-          src={clientSay3}
-          alt="client 3"
-        />
-        <Image
-          className="absolute -bottom-10 right-[140px]"
-          src={clientSay4}
-          alt="client 4"
-        />
-        <Image
-          className="absolute left-full ml-32 bottom-[80px]"
-          src={clientSay5}
-          alt="client 5"
-        />
-        <Image
-          className="absolute -right-10 top-10 "
-          src={clientSay6}
-          alt="client 6"
-        />
-      </div>
-    );
-  };
+  const currentItem = data[index];
 
   return (
     <div className={`nc-SectionClientSay relative ${className} `}>
-      <Heading desc="Let's see what people think of Chisfis" isCenter>
-        Good news from far away
+      <Heading
+        desc="Feedback from travelers who booked desert safaris, adventure rides, and Dubai city tours"
+        isCenter
+      >
+        Guest reviews
       </Heading>
-      <div className="relative md:mb-16 max-w-2xl mx-auto">
-        {renderBg()}
-        <Image className="mx-auto" src={clientSayMain} alt="" />
-        <div className={`mt-12 lg:mt-16 relative `}>
+      <div className="relative md:mb-16 max-w-4xl mx-auto">
+        <div className="relative rounded-[2rem] overflow-hidden border border-white/10">
           <Image
-            className="opacity-50 md:opacity-100 absolute -mr-16 lg:mr-3 right-full top-1"
-            src={quotationImg}
-            alt=""
+            src={DUBAI_MEDIA.archiveHero}
+            alt="Dubai skyline"
+            width={1400}
+            height={800}
+            className="w-full h-[320px] md:h-[420px] object-cover"
           />
-          <Image
-            className="opacity-50 md:opacity-100 absolute -ml-16 lg:ml-3 left-full top-1"
-            src={quotationImg2}
-            alt=""
-          />
-
+          <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
+        </div>
+        <div className="relative -mt-20 md:-mt-24 px-6">
           <MotionConfig
             transition={{
               x: { type: "spring", stiffness: 300, damping: 30 },
@@ -142,7 +73,7 @@ const SectionClientSay: FC<SectionClientSayProps> = ({
             }}
           >
             <div
-              className={`relative whitespace-nowrap overflow-hidden`}
+              className="relative whitespace-nowrap overflow-hidden max-w-2xl mx-auto bg-white dark:bg-neutral-900 rounded-3xl shadow-2xl p-8 md:p-10"
               {...handlers}
             >
               <AnimatePresence initial={false} custom={direction}>
@@ -152,21 +83,25 @@ const SectionClientSay: FC<SectionClientSayProps> = ({
                   variants={variants(200, 1)}
                   initial="enter"
                   animate="center"
-                  // exit="exit"
                   className="inline-flex flex-col items-center text-center whitespace-normal"
                 >
-                  <>
-                    <span className="block text-2xl">
-                      {currentItem.content}
-                    </span>
-                    <span className="block mt-8 text-2xl font-semibold">
-                      {currentItem.clientName}
-                    </span>
-                    <div className="flex items-center space-x-2 text-lg mt-2 text-neutral-400">
-                      <MapPinIcon className="h-5 w-5" />
-                      <span>{currentItem.clientAddress}</span>
-                    </div>
-                  </>
+                  <Image
+                    src={currentItem.image}
+                    alt={currentItem.clientName}
+                    width={88}
+                    height={88}
+                    className="w-20 h-20 rounded-full object-cover"
+                  />
+                  <span className="block text-xl md:text-2xl mt-6">
+                    {currentItem.content}
+                  </span>
+                  <span className="block mt-8 text-2xl font-semibold">
+                    {currentItem.clientName}
+                  </span>
+                  <div className="flex items-center space-x-2 text-lg mt-2 text-neutral-400">
+                    <MapPinIcon className="h-5 w-5" />
+                    <span>{currentItem.clientAddress}</span>
+                  </div>
                 </motion.div>
               </AnimatePresence>
 
@@ -177,7 +112,7 @@ const SectionClientSay: FC<SectionClientSayProps> = ({
                       i === index ? "bg-black/70" : "bg-black/10 "
                     }`}
                     onClick={() => changeItemId(i)}
-                    key={i}
+                    key={item.id}
                   />
                 ))}
               </div>

@@ -1,17 +1,17 @@
 import React, { FC, ReactNode } from "react";
-import imagePng from "@/images/hero-right2.png";
 import HeroSearchForm, {
   SearchTab,
 } from "../(client-components)/(HeroSearchForm)/HeroSearchForm";
 import Image, { StaticImageData } from "next/image";
 import { AMMAR_TOURS_CONTACT } from "@/data/ammarTours";
+import { DUBAI_MEDIA } from "@/data/dubaiMedia";
 
 export interface SectionHeroArchivePageProps {
   className?: string;
   listingType?: ReactNode;
   currentPage: "Experiences";
   currentTab: SearchTab;
-  rightImage?: StaticImageData;
+  rightImage?: StaticImageData | string;
 }
 
 const SectionHeroArchivePage: FC<SectionHeroArchivePageProps> = ({
@@ -19,7 +19,7 @@ const SectionHeroArchivePage: FC<SectionHeroArchivePageProps> = ({
   listingType,
   currentPage,
   currentTab,
-  rightImage = imagePng,
+  rightImage = DUBAI_MEDIA.archiveHero,
 }) => {
   return (
     <div
@@ -47,9 +47,11 @@ const SectionHeroArchivePage: FC<SectionHeroArchivePageProps> = ({
         </div>
         <div className="flex-grow">
           <Image
-            className="w-full"
+            className="w-full rounded-3xl object-cover"
             src={rightImage}
-            alt="hero"
+            alt="Dubai skyline"
+            width={1400}
+            height={900}
             priority
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
           />

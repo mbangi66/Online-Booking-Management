@@ -1,10 +1,8 @@
 import React, { FC } from "react";
-import HIW1img from "@/images/HIW1.png";
-import HIW2img from "@/images/HIW2.png";
-import HIW3img from "@/images/HIW3.png";
 import VectorImg from "@/images/VectorHIW.svg";
 import Image, { StaticImageData } from "next/image";
 import Heading from "@/shared/Heading";
+import { DUBAI_HOW_IT_WORK_IMAGES } from "@/data/dubaiMedia";
 
 export interface SectionHowItWorkProps {
   className?: string;
@@ -12,27 +10,27 @@ export interface SectionHowItWorkProps {
     id: number;
     title: string;
     desc: string;
-    img: StaticImageData;
-    imgDark?: StaticImageData;
+    img: StaticImageData | string;
+    imgDark?: StaticImageData | string;
   }[];
 }
 
 const DEMO_DATA: SectionHowItWorkProps["data"] = [
   {
     id: 1,
-    img: HIW1img,
+    img: DUBAI_HOW_IT_WORK_IMAGES[0],
     title: "1. Pick your tour",
     desc: "Choose from desert safaris, buggy rides, dhow cruises, or city tours based on your schedule and group size.",
   },
   {
     id: 2,
-    img: HIW2img,
+    img: DUBAI_HOW_IT_WORK_IMAGES[1],
     title: "2. Confirm your booking",
     desc: "Reserve online or contact Ammar Tours on phone or WhatsApp for fast confirmation, private options, and pickup details.",
   },
   {
     id: 3,
-    img: HIW3img,
+    img: DUBAI_HOW_IT_WORK_IMAGES[2],
     title: "3. Enjoy Dubai",
     desc: "Meet your guide, head into the dunes or city, and enjoy the activities included in your chosen package.",
   },
@@ -77,8 +75,10 @@ const SectionHowItWork: FC<SectionHowItWorkProps> = ({
             ) : (
               <Image
                 alt=""
-                className="mb-8 max-w-[180px] mx-auto"
+                className="mb-8 w-40 h-40 rounded-full object-cover mx-auto"
                 src={item.img}
+                width={180}
+                height={180}
               />
             )}
             <div className="text-center mt-auto">

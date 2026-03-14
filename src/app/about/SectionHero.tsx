@@ -4,7 +4,7 @@ import ButtonPrimary from "@/shared/ButtonPrimary";
 
 export interface SectionHeroProps {
   className?: string;
-  rightImg: StaticImageData;
+  rightImg: StaticImageData | string;
   heading: ReactNode;
   subHeading: string;
   btnText: string;
@@ -30,7 +30,13 @@ const SectionHero: FC<SectionHeroProps> = ({
           {!!btnText && <ButtonPrimary href="/login">{btnText}</ButtonPrimary>}
         </div>
         <div className="flex-grow">
-          <Image className="w-full" src={rightImg} alt="" />
+          <Image
+            className="w-full rounded-3xl object-cover"
+            src={rightImg}
+            alt=""
+            width={1400}
+            height={900}
+          />
         </div>
       </div>
     </div>
