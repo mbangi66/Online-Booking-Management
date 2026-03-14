@@ -1,5 +1,5 @@
 import { Route } from "@/routers/types";
-import { ExperiencesDataType, TaxonomyType } from "./types";
+import { ExperiencesDataType, TaxonomyType, TwMainColor } from "./types";
 import { DEMO_AUTHORS } from "./authors";
 
 const listingHref = "/listing-experiences-detail" as Route<string>;
@@ -321,7 +321,12 @@ export const AMMAR_TOUR_LISTINGS: ExperiencesDataType[] = [
   },
 ];
 
-export const AMMAR_HOME_FEATURES = [
+export const AMMAR_HOME_FEATURES: {
+  badge: string;
+  badgeColor?: TwMainColor;
+  title: string;
+  description: string;
+}[] = [
   {
     badge: "Experience",
     badgeColor: undefined,

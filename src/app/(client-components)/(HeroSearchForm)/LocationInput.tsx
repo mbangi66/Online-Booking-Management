@@ -69,10 +69,10 @@ const LocationInput: FC<LocationInputProps> = ({
         </h3>
         <div className="mt-2">
           {[
-            "Hamptons, Suffolk County, NY",
-            "Las Vegas, NV, United States",
-            "Ueno, Taito, Tokyo",
-            "Ikebukuro, Toshima, Tokyo",
+            "Al Lahbab Desert, Dubai",
+            "Dubai Marina",
+            "Downtown Dubai",
+            "Abu Dhabi City",
           ].map((item) => (
             <span
               onClick={() => handleSelectLocation(item)}
@@ -96,10 +96,10 @@ const LocationInput: FC<LocationInputProps> = ({
     return (
       <>
         {[
-          "Ha Noi, Viet Nam",
-          "San Diego, CA",
-          "Humboldt Park, Chicago, IL",
-          "Bangor, Northern Ireland",
+          "Desert Safari Dubai",
+          "Dune Buggy Dubai",
+          "Dhow Cruise Marina",
+          "Dubai City Tour",
         ].map((item) => (
           <span
             onClick={() => handleSelectLocation(item)}

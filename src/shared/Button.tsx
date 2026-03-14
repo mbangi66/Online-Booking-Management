@@ -13,7 +13,7 @@ export interface ButtonProps {
   loading?: boolean;
   disabled?: boolean;
   type?: ButtonHTMLAttributes<HTMLButtonElement>["type"];
-  href?: Route<string>;
+  href?: Route<string> | string;
   targetBlank?: boolean;
   onClick?: () => void;
   children?: React.ReactNode;
@@ -60,9 +60,25 @@ const Button: FC<ButtonProps> = ({
   };
 
   if (!!href) {
+    const isExternalHref = typeof href === "string" && /^(https?:|mailto:|tel:)/.test(href);
+
+    if (isExternalHref) {
+      return (
+        <a
+          href={href}
+          target={targetBlank ? "_blank" : undefined}
+          className={`${CLASSES} `}
+          onClick={onClick}
+          rel={targetBlank ? "noopener noreferrer" : undefined}
+        >
+          {children || `This is Link`}
+        </a>
+      );
+    }
+
     return (
       <Link
-        href={href}
+        href={href as Route<string>}
         target={targetBlank ? "_blank" : undefined}
         className={`${CLASSES} `}
         onClick={onClick}
