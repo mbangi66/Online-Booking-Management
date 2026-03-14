@@ -14,75 +14,75 @@ export interface SectionGridCategoryBoxProps {
 const DEMO_CATS: TaxonomyType[] = [
   {
     id: "1",
-    href: "/listing-stay-map",
-    name: "New Yourk",
+    href: "/listing-experiences",
+    name: "Dubai Marina",
     taxonomy: "category",
-    count: 1882,
+    count: 18,
     thumbnail:
-      "https://images.pexels.com/photos/64271/queen-of-liberty-statue-of-liberty-new-york-liberty-statue-64271.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+      "https://images.pexels.com/photos/4624570/pexels-photo-4624570.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   },
   {
     id: "2",
-    href: "/listing-stay-map",
-    name: "Singapore",
+    href: "/listing-experiences",
+    name: "Downtown Dubai",
     taxonomy: "category",
-    count: 8288,
+    count: 22,
     thumbnail:
-      "https://images.pexels.com/photos/7740160/pexels-photo-7740160.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "https://images.pexels.com/photos/34218532/pexels-photo-34218532.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   },
   {
     id: "3",
-    href: "/listing-stay-map",
-    name: "Paris",
+    href: "/listing-experiences",
+    name: "Al Lahbab Desert",
     taxonomy: "category",
-    count: 1288,
+    count: 14,
     thumbnail:
-      "https://images.pexels.com/photos/739407/pexels-photo-739407.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "https://images.pexels.com/photos/16271319/pexels-photo-16271319.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   },
   {
     id: "4",
-    href: "/listing-stay-map",
-    name: "London",
+    href: "/listing-experiences",
+    name: "Abu Dhabi",
     taxonomy: "category",
-    count: 112,
+    count: 9,
     thumbnail:
-      "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+      "https://images.pexels.com/photos/32045630/pexels-photo-32045630.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   },
   {
     id: "5",
-    href: "/listing-stay-map",
-    name: "Tokyo",
+    href: "/listing-experiences",
+    name: "Old Dubai",
     taxonomy: "category",
-    count: 323,
+    count: 12,
     thumbnail:
-      "https://images.pexels.com/photos/4151484/pexels-photo-4151484.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+      "https://images.pexels.com/photos/35132526/pexels-photo-35132526.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   },
   {
     id: "6",
-    href: "/listing-stay-map",
-    name: "Maldives",
+    href: "/listing-experiences",
+    name: "Desert Camps",
     taxonomy: "category",
-    count: 2223,
+    count: 11,
     thumbnail:
-      "https://images.pexels.com/photos/3250613/pexels-photo-3250613.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "https://images.pexels.com/photos/8003129/pexels-photo-8003129.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   },
   {
     id: "7",
-    href: "/listing-stay-map",
-    name: "New Yourk",
+    href: "/listing-experiences",
+    name: "Dune Tracks",
     taxonomy: "category",
-    count: 1775,
+    count: 8,
     thumbnail:
-      "https://images.pexels.com/photos/64271/queen-of-liberty-statue-of-liberty-new-york-liberty-statue-64271.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+      "https://images.pexels.com/photos/14585894/pexels-photo-14585894.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   },
   {
     id: "8",
-    href: "/listing-stay-map",
-    name: "Singapore",
+    href: "/listing-experiences",
+    name: "Creek & Marina",
     taxonomy: "category",
-    count: 1288,
+    count: 10,
     thumbnail:
-      "https://images.pexels.com/photos/7740160/pexels-photo-7740160.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "https://images.pexels.com/photos/35664165/pexels-photo-35664165.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   },
 ];
 
@@ -98,7 +98,6 @@ const SectionGridCategoryBox: React.FC<SectionGridCategoryBoxProps> = ({
     case "card1":
       CardComponentName = CardCategoryBox1;
       break;
-
     default:
       CardComponentName = CardCategoryBox1;
   }
@@ -106,7 +105,7 @@ const SectionGridCategoryBox: React.FC<SectionGridCategoryBoxProps> = ({
   return (
     <div className={`nc-SectionGridCategoryBox relative ${className}`}>
       <Heading
-        desc="Discover great places near where you live"
+        desc="Discover Dubai and UAE tour areas instead of generic template destinations"
         isCenter={headingCenter}
       >
         Explore nearby

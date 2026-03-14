@@ -9,9 +9,9 @@ import Comment from "@/shared/Comment";
 import SocialsList from "@/shared/SocialsList";
 import Textarea from "@/shared/Textarea";
 import Image from "next/image";
-import travelhero2Image from "@/images/travelhero2.png";
 import Link from "next/link";
 import { Route } from "@/routers/types";
+import { DUBAI_MEDIA } from "@/data/dubaiMedia";
 
 const Page = ({
   params,
@@ -117,7 +117,13 @@ const Page = ({
           {`        It's probably important that images look okay here by default as well:`}
         </p>
         <figure>
-          <Image src={travelhero2Image} alt="blog" className="rounded-2xl" />
+          <Image
+            src={DUBAI_MEDIA.blogHero}
+            alt="Dubai skyline blog"
+            className="rounded-2xl"
+            width={1400}
+            height={900}
+          />
           <figcaption>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure vel
             officiis ipsum placeat itaque neque dolorem modi perspiciatis dolor
@@ -291,7 +297,13 @@ const Page = ({
     <div className="nc-PageSingle pt-8 lg:pt-16 ">
       {renderHeader()}
       <div className="container my-10 sm:my-12 ">
-        <Image className="w-full rounded-xl" src={travelhero2Image} alt="" />
+        <Image
+          className="w-full rounded-xl object-cover"
+          src={DUBAI_MEDIA.blogHero}
+          alt="Dubai skyline"
+          width={1400}
+          height={900}
+        />
       </div>
 
       <div className="nc-SingleContent container space-y-10">

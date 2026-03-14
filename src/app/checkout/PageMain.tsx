@@ -16,6 +16,7 @@ import converSelectedDateToString from "@/utils/converSelectedDateToString";
 import ModalSelectGuests from "@/components/ModalSelectGuests";
 import Image from "next/image";
 import { GuestsObject } from "../(client-components)/type";
+import { DUBAI_MEDIA } from "@/data/dubaiMedia";
 
 export interface CheckOutPagePageMainProps {
   className?: string;
@@ -45,21 +46,21 @@ const CheckOutPagePageMain: FC<CheckOutPagePageMainProps> = ({
                 alt=""
                 fill
                 sizes="200px"
-                src="https://images.pexels.com/photos/6373478/pexels-photo-6373478.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                src={DUBAI_MEDIA.heroMain}
               />
             </div>
           </div>
           <div className="py-5 sm:px-5 space-y-3">
             <div>
               <span className="text-sm text-neutral-500 dark:text-neutral-400 line-clamp-1">
-                Hotel room in Tokyo, Jappan
+                Evening Desert Safari, Dubai
               </span>
               <span className="text-base font-medium mt-1 block">
-                The Lounge & Bar
+                Ammar Tours
               </span>
             </div>
             <span className="block  text-sm text-neutral-500 dark:text-neutral-400">
-              2 beds · 2 baths
+              Shared transfer · camp experience
             </span>
             <div className="w-10 border-b border-neutral-200  dark:border-neutral-700"></div>
             <StartRating />
@@ -68,18 +69,18 @@ const CheckOutPagePageMain: FC<CheckOutPagePageMainProps> = ({
         <div className="flex flex-col space-y-4">
           <h3 className="text-2xl font-semibold">Price detail</h3>
           <div className="flex justify-between text-neutral-6000 dark:text-neutral-300">
-            <span>$19 x 3 day</span>
-            <span>$57</span>
+            <span>AED 130 x 2 guests</span>
+            <span>AED 260</span>
           </div>
           <div className="flex justify-between text-neutral-6000 dark:text-neutral-300">
             <span>Service charge</span>
-            <span>$0</span>
+            <span>AED 0</span>
           </div>
 
           <div className="border-b border-neutral-200 dark:border-neutral-700"></div>
           <div className="flex justify-between font-semibold">
             <span>Total</span>
-            <span>$57</span>
+            <span>AED 260</span>
           </div>
         </div>
       </div>

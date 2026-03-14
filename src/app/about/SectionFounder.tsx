@@ -12,42 +12,39 @@ export interface People {
 const FOUNDER_DEMO: People[] = [
   {
     id: "1",
-    name: `Niamh O'Shea`,
-    job: "Co-founder and Chief Executive",
+    name: "Ammar Tours Team",
+    job: "Guest support and safari coordination",
     avatar:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-  },
-  {
-    id: "4",
-    name: `Danien Jame`,
-    job: "Co-founder and Chief Executive",
-    avatar:
-      "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-  },
-  {
-    id: "3",
-    name: `Orla Dwyer`,
-    job: "Co-founder, Chairman",
-    avatar:
-      "https://images.unsplash.com/photo-1560365163-3e8d64e762ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+      "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500&w=500",
   },
   {
     id: "2",
-    name: `Dara Frazier`,
-    job: "Co-Founder, Chief Strategy Officer",
+    name: "Desert Safari Desk",
+    job: "Pickup planning and booking updates",
     avatar:
-      "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+      "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500&w=500",
+  },
+  {
+    id: "3",
+    name: "City Tour Support",
+    job: "Tour scheduling and itinerary help",
+    avatar:
+      "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500&w=500",
+  },
+  {
+    id: "4",
+    name: "Adventure Booking Team",
+    job: "Buggy and quad ride coordination",
+    avatar:
+      "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500&w=500",
   },
 ];
 
 const SectionFounder = () => {
   return (
     <div className="nc-SectionFounder relative">
-      <Heading
-        desc="We’re impartial and independent, and every day we create distinctive,
-          world-class programmes and content"
-      >
-        ⛱ Founder
+      <Heading desc="Meet the people behind the tour coordination, customer support, and booking flow">
+        Ammar Tours team
       </Heading>
       <div className="grid sm:grid-cols-2 gap-x-5 gap-y-8 lg:grid-cols-4 xl:gap-x-8">
         {FOUNDER_DEMO.map((item) => (
@@ -55,9 +52,9 @@ const SectionFounder = () => {
             <div className="relative h-0 aspect-h-1 aspect-w-1 rounded-xl overflow-hidden">
               <Image
                 fill
-                className=" object-cover"
+                className="object-cover"
                 src={item.avatar}
-                alt=""
+                alt={item.name}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 30vw, 30vw"
               />
             </div>

@@ -5,6 +5,7 @@ import NcPlayIcon from "@/shared/NcPlayIcon";
 import NcPlayIcon2 from "@/shared/NcPlayIcon2";
 import Image from "next/image";
 import React, { FC, useState } from "react";
+import { DUBAI_MEDIA } from "@/data/dubaiMedia";
 
 export interface VideoType {
   id: string;
@@ -20,33 +21,28 @@ export interface SectionVideosProps {
 const VIDEOS_DEMO: VideoType[] = [
   {
     id: "Ao7e4iisKMs",
-    title: "Magical Scotland - 4K Scenic Relaxation Film with Calming Music",
-    thumbnail:
-      "https://images.pexels.com/photos/131423/pexels-photo-131423.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    title: "Dubai desert safari highlights",
+    thumbnail: DUBAI_MEDIA.heroMain,
   },
   {
     id: "a5V6gdu5ih8",
-    title: "Magical Scotland - 4K Scenic Relaxation Film with Calming Music",
-    thumbnail:
-      "https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    title: "Dubai skyline and Marina tour scenes",
+    thumbnail: DUBAI_MEDIA.archiveHero,
   },
   {
     id: "MuB7HHeuNbc",
-    title: "Magical Scotland - 4K Scenic Relaxation Film with Calming Music",
-    thumbnail:
-      "https://images.pexels.com/photos/1660995/pexels-photo-1660995.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    title: "Dune buggy ride moments",
+    thumbnail: DUBAI_MEDIA.buggyFeature,
   },
   {
     id: "eEaZvEZye84",
-    title: "Magical Scotland - 4K Scenic Relaxation Film with Calming Music",
-    thumbnail:
-      "https://images.pexels.com/photos/4983184/pexels-photo-4983184.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    title: "Burj Khalifa and city tour views",
+    thumbnail: DUBAI_MEDIA.blogHero,
   },
   {
     id: "EuDJZDaSP0Q",
-    title: "Magical Scotland - 4K Scenic Relaxation Film with Calming Music",
-    thumbnail:
-      "https://images.pexels.com/photos/2549018/pexels-photo-2549018.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    title: "Abu Dhabi day trip landmarks",
+    thumbnail: DUBAI_MEDIA.grandMosque,
   },
 ];
 
@@ -86,9 +82,7 @@ const SectionVideos: FC<SectionVideosProps> = ({
               src={video.thumbnail}
               title={video.title}
               alt={video.title}
-              sizes="(max-width: 1000px) 100vw,
-                (max-width: 1200px) 75vw,
-                50vw"
+              sizes="(max-width: 1000px) 100vw, (max-width: 1200px) 75vw, 50vw"
             />
           </>
         )}
@@ -117,9 +111,7 @@ const SectionVideos: FC<SectionVideosProps> = ({
           src={video.thumbnail}
           title={video.title}
           alt={video.title}
-          sizes="(max-width: 300px) 100vw,
-          (max-width: 1200px) 50vw,
-          25vw"
+          sizes="(max-width: 300px) 100vw, (max-width: 1200px) 50vw, 25vw"
         />
       </div>
     );
@@ -127,11 +119,8 @@ const SectionVideos: FC<SectionVideosProps> = ({
 
   return (
     <div className={`nc-SectionVideos ${className}`}>
-      <Heading
-        desc="Check out our hottest videos. View more and share more new
-          perspectives on just about any topic. Everyone’s welcome."
-      >
-        🎬 The Videos
+      <Heading desc="Dubai and UAE tour visuals instead of generic template travel footage">
+        Tour videos
       </Heading>
 
       <div className="flex flex-col relative sm:pr-4 sm:py-4 md:pr-6 md:py-6 xl:pr-14 xl:py-14 lg:flex-row">
